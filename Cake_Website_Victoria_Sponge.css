@@ -1,0 +1,85 @@
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    display: block;
+    padding: 8px;
+    background-color: white;
+    border: 8px solid #CDFCFE;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .list-inline-nav-bar {
+    display: inline;
+  }
+
+  .nav-bar a:hover {
+    background-color: #CDFCFE;
+  }
+
+
+
+header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #CDFCFE;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.victoria-sponge-title {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    margin: auto;
+    border: 30px solid white;
+    padding: 40px; 
+    width: 300px; 
+    
+}
+
+.victoria-sponge-img {
+    float: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: #CDFCFE;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.border-box {
+    margin-left: 27%;
+    margin-right: 27%;
+    border: 30px solid white;
+}
+
+.other-recipes {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.other-recipes-food-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+figcaption {
+    text-align:center;
+}
