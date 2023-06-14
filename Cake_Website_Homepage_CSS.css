@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .nav-bar {
     list-style-type: none;
     margin: 0;
@@ -12,10 +17,14 @@
 
   .list-inline-nav-bar {
     display: inline;
+    border-right: 1.5px solid black;
+    padding-right: 5px;
   }
 
   .nav-bar a:hover {
     background-color: #CDFCFE;
+    font-size: 110%;
+    transition: 0.3s;
   }
 
 
@@ -77,6 +86,11 @@ hr {
     padding-top: 20px;
     padding-bottom: 20px;
     
+}
+
+.cake-img:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
 }
 
 figcaption {
