@@ -17,16 +17,16 @@
         </ul>
       </nav>
       <header>
-        <nav><h1 class="victoria-sponge-title">Ingredients Calculator</h1></nav>
+        <h1 class="website_header">Ingredients Calculator</h1>
     </header>
     <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Recipe</label>
-          <select class="recipes" onclick=getSelectedValue()>
+          <select id="recipes" class="recipes" onchange=updateRecipe()>
             <option>Select recipe</option>
             <option>Victoria Sponge</option>
-              <option>Chocolate Cake</option>
-              <option>Lemon Drizzle</option>
+            <option>Chocolate Cake</option>
+            <option>Lemon Drizzle</option>
           </select>
           <small id="emailHelp" class="form-text text-muted">Choose from the list which recipe you would like to personalise.</small>
         </div>
@@ -44,6 +44,8 @@
               <option>8</option>
               <option>9</option>
               <option>10</option>
+              <option>11</option>
+              <option>12</option>
             </select>
             <small id="emailHelp" class="form-text text-muted">Baking for seven? Don't worry we will do the hard work for you.</small>
           </div>
@@ -51,33 +53,39 @@
       </form>
 
       <div id="recipe-outcome-block">
-        <p id="recipe-outcome-block-2">Origional Recipe: </p>
+        <p id="recipe-outcome-block-2"> </p>
       </div>
 
 
 
 
 <script>
-    const victoriaSponge = ("Ingredients: 4 eggs, 225g/8oz caster sugar, 225g/8oz self-raising flour, 2 tsp baking powder, 225g/8 oz butter");
-    const chocolateCake = ("");
-    const lemonDrizzle = ("");
-    const noRecipe = "No Recipe Chosen";
+  const victoriaSponge = `Original Recipe:
+                    <ul>
+                    <li>4 eggs</li>
+                    <li>225g/8oz caster sugar</li>
+                    <li>225g/8oz self-raising flour</li>
+                    <li>2 tsp baking powder</li>
+                    <li>225g/8 oz butter</li>
+                </ul>`;
+  const chocolateCake = "";
+  const lemonDrizzle = "";
+  const noRecipe = "No Recipe Chosen";
 
 
-    function getSelectedValue() {
-        let value = document.getElementById("recipes").value;
-        if (value === "Victoria Sponge") {
-            return victoriaSponge;
-        } else if (value === "Chocolate Cake") {
-                return chocolateCake;
-        } else if (value === "Lemon Drizzle") {
-                return lemonDrizzle;
-        } else {
-            return noRecipe;
-        }
-        document.getElementById("recipe-outcome-block-2").innerHTML = value;
-
+  function updateRecipe() {
+    let value = document.getElementById("recipes").value;
+    console.log(value);
+    if (value === "Victoria Sponge") {
+      document.getElementById("recipe-outcome-block-2").innerHTML = victoriaSponge;
+    } else if (value === "Chocolate Cake") {
+      document.getElementById("recipe-outcome-block-2").innerHTML = chocolateCake;
+    } else if (value === "Lemon Drizzle") {
+      document.getElementById("recipe-outcome-block-2").innerHTML = lemonDrizzle;
+    } else {
+      document.getElementById("recipe-outcome-block-2").innerHTML = noRecipe;
     }
+  }
 
 
 
