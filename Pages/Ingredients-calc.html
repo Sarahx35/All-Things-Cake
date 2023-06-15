@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
     <title>Ingredients Calculator</title>
 </head>
 <body>
+
     <nav>
         <ul class="nav-bar">
           <li class="list-inline-nav-bar"><a href="/index.html">Home</a></li>
@@ -16,9 +16,11 @@
           <li class="list-inline-nav-bar"><a href="/Pages/Contact_Us.html">Contact Us</a></li>
         </ul>
       </nav>
+    
       <header>
-        <h1 class="website_header">Ingredients Calculator</h1>
+        <h1 class="website-header">Ingredients Calculator</h1>
     </header>
+    
     <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Recipe</label>
@@ -32,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Number of people</label>
-            <select class="form-control">
+            <select id="number-people" class="number-people">
             <option>Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -57,25 +59,26 @@
       </div>
 
 
-
+    
 
 <script>
-  const victoriaSponge = `Original Recipe:
+  const victoriaSponge = `Original Recipe (Serves 12):
                     <ul>
                     <li>4 eggs</li>
-                    <li>225g/8oz caster sugar</li>
-                    <li>225g/8oz self-raising flour</li>
+                    <li>225g caster sugar</li>
+                    <li>225g self-raising flour</li>
                     <li>2 tsp baking powder</li>
-                    <li>225g/8 oz butter</li>
+                    <li>225g butter</li>
                 </ul>`;
   const chocolateCake = "";
   const lemonDrizzle = "";
   const noRecipe = "No Recipe Chosen";
 
+  
+
 
   function updateRecipe() {
     let value = document.getElementById("recipes").value;
-    console.log(value);
     if (value === "Victoria Sponge") {
       document.getElementById("recipe-outcome-block-2").innerHTML = victoriaSponge;
     } else if (value === "Chocolate Cake") {
@@ -87,6 +90,18 @@
     }
   }
 
+  function changeRecipe() {
+    let value = document.getElementById("number-people").value;
+    if (value === "1") {
+      document.getElementById("recipe-outcome-block-2").innerHTML = victoriaSponge;
+    } else if (value === "2") {
+      document.getElementById("recipe-outcome-block-2").innerHTML = chocolateCake;
+    } else if (value === "3") {
+      document.getElementById("recipe-outcome-block-2").innerHTML = lemonDrizzle;
+    } else {
+      document.getElementById("recipe-outcome-block-2").innerHTML = noRecipe;
+    }
+  }
 
 
 

@@ -39,7 +39,7 @@ header {
     padding-top: 30px;
 }
 
-.website_header {
+.website-header {
     color: black;
     font-weight: bold;
     font-size: 40px;
@@ -94,6 +94,7 @@ hr {
     transform: scale(1.5);
     transition: 0.3s;
 }
+
 
 figcaption {
     text-align: center;
