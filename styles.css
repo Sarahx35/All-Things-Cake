@@ -29,6 +29,7 @@ a {
     transition: 0.3s;
   }
 
+  
 
 
 header {
@@ -46,8 +47,7 @@ header {
     margin: auto;
     border: 30px solid white;
     padding: 40px; 
-    width: 300px; 
-    
+    width: 300px;     
 }
 
 .subheading_text {
