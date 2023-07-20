@@ -210,8 +210,20 @@ figcaption {
 
 
 
+/* CONTACT PAGE */
+.contact-info {
+    text-align: center;
+    padding: 3em;
+}
 
+.contact-info h4 {
+    padding-top: 1.5em;
+}
 
+.social-icons img {
+    align-items: center;
+    padding: 0.5em;
+}
 
 
 
