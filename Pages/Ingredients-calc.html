@@ -69,7 +69,12 @@
       <p id="recipe-outcome-block-2"></p>
     </div>
 
+    <div id="new-recipe-outcome">
+      <p id="new-recipe-outcome-2"></p>
+    </div>
+
     <script>
+      //Selecting Recipes
       const victoriaSponge = `Original Recipe (Serves 12):
         <ul>
           <li>4 eggs</li>
@@ -109,7 +114,8 @@
         `;
       const noRecipe = "No Recipe Chosen";
 
-      //Printing Recipe Text
+
+      //Printing Original Recipe Text
       function updateRecipe() {
         let value = document.getElementById("recipes").value;
         if (value === "Victoria Sponge") {
@@ -127,22 +133,48 @@
         }
       }
 
-      function changeRecipe() {
+      //Selecting number of people
+      const updatedVictoriaSponge = {
+        eggs: 4,
+        casterSugar: 225,
+        selfRaisingFlour: 225,
+        bakingPowder: 2,
+        butter: 225
+      };
+
+      //Calculating new recipe with parameters of ingredients number and number of people.
+      //Issue that not all the recipes serve 12 to start with
+      function updatingRecipe(ingNum, num) {
+        let firstValue = ingNum / 12;
+        return ing * num;
+      }
+
+
+
+      function printNewRecipe() {
         let value = document.getElementById("number-people").value;
-        if (value === "1") {
-          document.getElementById("recipe-outcome-block-2").innerHTML =
-            victoriaSponge;
-        } else if (value === "2") {
-          document.getElementById("recipe-outcome-block-2").innerHTML =
+        let updatedNumber = `Recipe for ` + value;
+        if (value === 1) {
+          document.getElementById("new-recipe-outcome-2").innerHTML =
+          updatedNumber;
+        } else if (value === 2) {
+          document.getElementById("new-recipe-outcome-2").innerHTML =
             chocolateCake;
-        } else if (value === "3") {
-          document.getElementById("recipe-outcome-block-2").innerHTML =
+        } else if (value === 3) {
+          document.getElementById("new-recipe-outcome-2").innerHTML =
             lemonDrizzle;
         } else {
-          document.getElementById("recipe-outcome-block-2").innerHTML =
+          document.getElementById("new-recipe-outcome-2").innerHTML =
             noRecipe;
         }
       }
+
+      
+
+
+
+
+      
     </script>
   </body>
 </html>
