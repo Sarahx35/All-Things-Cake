@@ -14,6 +14,13 @@ a {
     color: black;
 }
 
+hr {
+    margin-left: 5em;
+    margin-right: 80em;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
 .nav-bar-home {
     list-style-type: none;
     margin-left: 35%;
@@ -176,6 +183,19 @@ main {
     padding-top: 25px;
 }
 
+
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.ingredients {
+    padding-right: 5em;
+}
+
 .victoria-sponge-title {
     color: black;
     font-weight: bold;
@@ -194,6 +214,16 @@ main {
     padding-right: 40px;
     padding-left: 40px;
 }
+
+.tutorial-vid {
+    padding-bottom: 5em;
+    padding-left: 5em;
+}
+
+
+
+
+/* END OF VICTORIA SPONGE*/
 
 
 footer {
