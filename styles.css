@@ -190,24 +190,16 @@ main {
     flex-direction: row-reverse;
     padding-left: 5em;
     padding-right: 5em;
+    padding-bottom: 5em;
 }
 
 .ingredients {
     padding-right: 5em;
 }
 
-.victoria-sponge-title {
-    color: black;
-    font-weight: bold;
-    font-size: 40px;
-    margin: auto;
-    border: 30px solid white;
-    padding: 40px; 
-    width: 300px; 
-    
-}
 
-.victoria-sponge-img {
+
+.recipe-cake-img {
     float: right;
     padding-top: 40px;
     padding-bottom: 40px;
