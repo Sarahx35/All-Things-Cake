@@ -14,15 +14,31 @@ a {
     color: black;
 }
 
-.nav-bar {
+.nav-bar-home {
     list-style-type: none;
-    margin: 0;
+    margin-left: 35%;
+    margin-right: 35%;
     padding: 0;
-    float: right;
+    text-align: center;
     display: block;
     padding: 8px;
     background-color: white;
-    border: 8px solid #CDFCFE;
+    border-top: 4px solid #CDFCFE;
+    border-bottom: 4px solid #CDFCFE;
+    font-family: 'Handlee', cursive !important;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 0;
+    text-align: center;
+    display: block;
+    padding: 8px;
+    background-color: white;
+    border-top: 4px solid #CDFCFE;
+    border-bottom: 4px solid #CDFCFE;
     font-family: 'Handlee', cursive !important;
   }
 
@@ -37,6 +53,26 @@ a {
     transition: 0.3s;
   }
 
+  .nav-bar-home a:hover {
+    background-color: #CDFCFE;
+    font-size: 110%;
+    transition: 0.3s;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .nav-bar-home {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
   
 
 
@@ -44,7 +80,6 @@ header {
     text-align: center;
     font-family: 'Handlee', cursive !important;
     background-color: #CDFCFE;
-    padding-bottom: 30px;
     padding-top: 30px;
 }
 
@@ -75,16 +110,9 @@ header {
 
 
 
-hr {
-    border-top: 3px solid #bbb;
-    margin-left: 500px;
-    margin-right: 500px;
-}
-
 .most_popular_recipes {
     text-align: center;
     font-size: 1.5em;
-    padding-top: 1em;
 }
 
 .homepage_food_gallery {
@@ -127,28 +155,6 @@ footer {
 
 /* VICTORIA SPONGE PAGE */
 
-.nav-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-    display: block;
-    padding: 8px;
-    background-color: white;
-    border: 8px solid #CDFCFE;
-    font-family: 'Handlee', cursive !important;
-  }
-
-  .list-inline-nav-bar {
-    display: inline;
-  }
-
-  .nav-bar a:hover {
-    background-color: #CDFCFE;
-  }
-
-
-
 header {
     text-align: center;
     font-family: 'Handlee', cursive !important;
@@ -159,8 +165,7 @@ header {
 
 main {
     font-family: 'Handlee', cursive !important;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 25px;
 }
 
 .victoria-sponge-title {
@@ -218,7 +223,7 @@ figcaption {
 /* CONTACT PAGE */
 .contact-info {
     text-align: center;
-    padding: 3em;
+    padding-top: 1em;
 }
 
 .contact-info h4 {
