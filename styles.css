@@ -28,10 +28,10 @@ hr {
     padding: 0;
     text-align: center;
     display: block;
-    padding: 8px;
+    padding: 0.3em;
     background-color: white;
-    border-top: 4px solid #CDFCFE;
-    border-bottom: 4px solid #CDFCFE;
+    border-top: 0.3em solid #CDFCFE;
+    border-bottom: 0.3em solid #CDFCFE;
     font-family: 'Handlee', cursive !important;
   }
 
@@ -42,10 +42,10 @@ hr {
     padding: 0;
     text-align: center;
     display: block;
-    padding: 8px;
+    padding: 0.2em;
     background-color: white;
-    border-top: 4px solid #CDFCFE;
-    border-bottom: 4px solid #CDFCFE;
+    border-top: 0.1em solid #CDFCFE;
+    border-bottom: 0.1em solid #CDFCFE;
     font-family: 'Handlee', cursive !important;
   }
 
@@ -66,19 +66,33 @@ hr {
     transition: 0.3s;
   }
 
-  @media only screen and (max-width: 1400px) {
+ 
+
+  @media only screen and (max-width: 1200px) {
     .nav-bar {
         display: flex;
         flex-direction: column;
+        margin-bottom: 3em;
+        text-align: center;
+    }
+    nav .nav-bar-home {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .rainbow_cake_img {
+        margin-bottom: 3em;
+    }
+    .most_popular_recipes {
+        margin: 0;
     }
   }
 
-  @media only screen and (max-width: 1400px) {
-    .nav-bar-home {
-        display: flex;
-        flex-direction: column;
-    }
-  }
+  
 
 
   
@@ -94,15 +108,24 @@ header {
 .website-header {
     color: black;
     font-weight: bold;
-    font-size: 40px;
     margin: auto;
-    border: 30px solid white;
-    padding: 40px; 
-    width: 300px;     
+    width: 8em;
+    font-size: 2.5em;
+    border: 0.6em solid white;
+    padding: 1em;      
 }
 
+@media only screen and (max-width: 600px) {
+     .website-header {
+        font-size: 2em;
+        border: none;
+        padding: 0; 
+    }
+  }
+
+
 .subheading_text {
-    font-size: 18px;
+    font-size: 1em;
     color: #242424;
     
 }
@@ -114,13 +137,16 @@ header {
     margin-right: auto;
     padding-top: 40px;
     padding-bottom: 40px;
+    max-width: 43em;
+    max-height: 25em;
 }
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1000px) {
     .rainbow_cake_img {
-        max-width: 600px;
-        max-height: 350px;
+        width: 100%;
+        padding: 0;
+        text-align: center;
     }
   }
 
@@ -135,9 +161,16 @@ header {
     flex-direction: row;
     justify-content: center;
     padding-top: 20px;
-    padding-bottom: 20px;
-    
+    padding-bottom: 20px; 
 }
+
+@media only screen and (max-width: 800px) {
+    .homepage_food_gallery {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+  }
 
 .cake-img:hover {
     transform: scale(1.5);
