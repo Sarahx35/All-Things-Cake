@@ -266,6 +266,35 @@ figcaption {
 }
 
 
+/* ALL RECIPES */
+
+.all-recipes-list {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 3em;
+    padding-top: 1em;
+
+}
+
+.all-recipes-list h2 {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
+.list img {
+    padding-right: 1em;
+}
+
+.list figcaption {
+    padding-left: 5em;
+}
+
+/* END OF ALL RECIPES */
 
 
 
