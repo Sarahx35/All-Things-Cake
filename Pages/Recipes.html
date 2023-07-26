@@ -21,14 +21,23 @@
         </nav>
         <div class="all-recipes-list">
           <h2>All Recipes</h2>
-          <figure class="list">
-            <a href="/Pages/Chocolate_Cake.html"><img src="/Media/chocolate_cake.jpeg" width="200" height="150"></a>
-            <div class="list-description">
-              <h3><u><a href="/Pages/Chocolate_Cake.html">Chocolate Cake</a></u></h3>
-              <h4>Our really easy chocolate cake recipe is perfect for birthdays. It’s so moist and fudgy and will keep well for 4–5 days.</h4>
+          <div id="filter-btns">
+            <button class="btn active" onclick="filterSelection('all')">All</button>
+            <button class="btn" onclick="filterSelection('chocolate')">Chocolate</button>
+            <button class="btn" onclick="filterSelection('classics')">Classics</button>
+          </div>
+          <div class="filter-container">
+            <div class="filterDiv chocolate">
+              <figure class="list">
+                <a href="/Pages/Chocolate_Cake.html"><img src="/Media/chocolate_cake.jpeg" width="200" height="150"></a>
+                <div class="list-description">
+                  <h3><u><a href="/Pages/Chocolate_Cake.html">Chocolate Cake</a></u></h3>
+                  <h4>Our really easy chocolate cake recipe is perfect for birthdays. It’s so moist and fudgy and will keep well for 4–5 days.</h4>
+                </div>
+                </figure>
             </div>
-            </figure>
-            <figure class="list">
+            <div class="filterDiv classics">
+              <figure class="list">
                 <a href="/Pages/Lemon_Cake.html"><img src="/Media/lemon_drizzle_cake.jpeg" width="200" height="150"></a>
                 <div class="list-description">
                   <h3><u><a href="/Pages/Lemon_Cake.html">Lemon Cake</a></u></h3>
@@ -42,7 +51,14 @@
                 <h4>Mary Berry's easy Victoria sponge cake recipe is a baking classic and a tasty tea-time treat.</h4>
               </div>
         </figure>
+            </div>
+          </div>
         </div>
+
+
+        <script>
+         
+        </script>
 
 
           <footer>
