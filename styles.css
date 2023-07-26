@@ -248,7 +248,11 @@ main {
 .tutorial-vid {
     padding-bottom: 5em;
     padding-left: 5em;
+}
 
+.tutorial-vid video {
+    max-width: 700px;
+    max-height: auto;
 }
 
 
@@ -345,6 +349,8 @@ figcaption {
         max-width: 100%;
     }
   }
+
+
 
 
 
