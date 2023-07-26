@@ -42,10 +42,10 @@ hr {
     padding: 0;
     text-align: center;
     display: block;
-    padding: 0.2em;
+    padding: 0.3em;
     background-color: white;
-    border-top: 0.1em solid #CDFCFE;
-    border-bottom: 0.1em solid #CDFCFE;
+    border-top: 0.3em solid #CDFCFE;
+    border-bottom: 0.3em solid #CDFCFE;
     font-family: 'Handlee', cursive !important;
   }
 
@@ -74,8 +74,11 @@ hr {
         flex-direction: column;
         margin-bottom: 3em;
         text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
-    nav .nav-bar-home {
+    .nav-bar-home {
         display: flex;
         flex-direction: column;
         margin-bottom: 3em;
@@ -238,11 +241,14 @@ main {
     padding-bottom: 40px;
     padding-right: 40px;
     padding-left: 40px;
+    width: 42em;
+    height: 30em;
 }
 
 .tutorial-vid {
     padding-bottom: 5em;
     padding-left: 5em;
+
 }
 
 
@@ -280,6 +286,65 @@ footer {
 figcaption {
     text-align:center;
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .recipe-cake-img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .ingredients {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .ingredients ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .ingredients ol {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .border-box {
+        font-size: 2em;
+        border: none;
+        padding: 0; 
+        margin: 0;
+    }
+    .other-recipes {
+        font-size: 1em;
+    }
+    .other-recipes-food-gallery {
+        flex-direction: column;
+    }
+    .other-recipes-food-gallery img {
+        text-align: center;
+    }
+    .tutorial-vid{
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .tutorial-vid video {
+        max-width: 100%;
+    }
+  }
 
 
 
@@ -326,6 +391,22 @@ figcaption {
 .list figcaption {
     padding-left: 5em;
 }
+
+@media only screen and (max-width: 1200px) {
+    .list {
+        flex-direction: column;
+        margin: 0;
+    }
+    .all-recipes-list {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .all-recipes-list img {
+        width: 100%;
+        height: auto;
+    }
+  }
 
 /* END OF ALL RECIPES */
 
