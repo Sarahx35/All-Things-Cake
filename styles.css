@@ -421,6 +421,7 @@ figcaption {
     padding: 12px 16px;
     background-color: #CDFCFE;
     cursor: pointer;
+    display: inline-block;
   }
   
   /* Add a light grey background on mouse-over */
@@ -439,7 +440,17 @@ figcaption {
     display: none;
   }
 
-  
+
+  /* Recipe Calculator */
+.recipe-form-block {
+    display: flex;
+    flex-direction: row;
+}
+
+#recipe-outcome-block {
+    padding-left: 2em;
+    padding-right: 5em;
+}
 
  
 
