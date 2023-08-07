@@ -58,12 +58,39 @@
 
         <script>
           const btns = ['all-btn', 'chocolate-btn', 'classics-btn'];
-          const filter = ['all', 'chocolate', 'classics'];
-
+          const click = document.getElementById('filter-btns');
 
          function filterSelection(label) {
+          click.addEventListener('click', clickOutcome)
+
+          function clickOutcome() {
+            if (label == 'chocolate') {
+            document.getElementById('chocolate').classList.remove("none");
+            document.getElementById('classics').classList.add("none");
+            document.getElementById('chocolate-btn').classList.add("active");
+            document.getElementById('all-btn').classList.remove("active"); 
+            document.getElementById('classics-btn').classList.remove("active");          
+          } else if (label == 'classics') {
+            document.getElementById('classics').classList.remove("none");
+            document.getElementById('chocolate').classList.add("none");
+            document.getElementById('classics-btn').classList.add("active");
+            document.getElementById('all-btn').classList.remove("active");
+            document.getElementById('chocolate-btn').classList.remove("active");
+          } else {
+            document.getElementById('chocolate').classList.remove("none");
+            document.getElementById('classics').classList.remove("none");
+            document.getElementById('all-btn').classList.add("active");
+            document.getElementById('chocolate-btn').classList.remove("active"); 
+            document.getElementById('classics-btn').classList.remove("active"); 
+          }
+          }
+         }
 
 
+
+
+
+         /*
           //Issue of secondary click
           //Issue of removing none class 
           //Issue of removing highlighted btn
@@ -88,9 +115,8 @@
             document.getElementById('all-btn').classList.remove("active");
           } else if (label == 'all') {
             document.getElementById('filter-container').classList.remove("none");
-          } 
-
-         }
+          }
+*/
 
 
 
