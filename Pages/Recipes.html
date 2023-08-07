@@ -22,12 +22,12 @@
         <div class="all-recipes-list">
           <h2>All Recipes</h2>
           <div id="filter-btns">
-            <button class="btn active" onclick="filterSelection('all')">All</button>
-            <button class="btn" onclick="filterSelection('chocolate')">Chocolate</button>
-            <button class="btn" onclick="filterSelection('classics')">Classics</button>
+            <button id="all-btn" class="btn active" onclick="filterSelection('all')">All</button>
+            <button id="chocolate-btn" class="btn" onclick="filterSelection('chocolate')">Chocolate</button>
+            <button id="classics-btn" class="btn" onclick="filterSelection('classics')">Classics</button>
           </div>
-          <div class="filter-container">
-            <div class="filterDiv chocolate">
+          <div id = "filter-container" class="filter-container">
+            <div id = "chocolate" class="filterDiv chocolate">
               <figure class="list">
                 <a href="/Pages/Chocolate_Cake.html"><img src="/Media/chocolate_cake.jpeg" width="200" height="150"></a>
                 <div class="list-description">
@@ -36,7 +36,7 @@
                 </div>
                 </figure>
             </div>
-            <div class="filterDiv classics">
+            <div id = "classics" class="filterDiv classics">
               <figure class="list">
                 <a href="/Pages/Lemon_Cake.html"><img src="/Media/lemon_drizzle_cake.jpeg" width="200" height="150"></a>
                 <div class="list-description">
@@ -57,7 +57,43 @@
 
 
         <script>
-         
+          const btns = ['all-btn', 'chocolate-btn', 'classics-btn'];
+          const filter = ['all', 'chocolate', 'classics'];
+
+
+         function filterSelection(label) {
+
+
+          //Issue of secondary click
+          //Issue of removing none class 
+          //Issue of removing highlighted btn
+
+          
+          //Goes through each button and removes active class and adds it to one selected
+          btns.forEach((element) => {
+            document.getElementById(i).classList.remove("active");
+            document.getElementById(label).classList.add("active");
+          });
+            
+          
+          if (label == 'chocolate') {
+            document.getElementById('chocolate').classList.remove("none");
+            document.getElementById('classics').classList.add("none");
+            document.getElementById('chocolate-btn').classList.add("active");
+            document.getElementById('all-btn').classList.remove("active");          
+          } else if (label == 'classics') {
+            document.getElementById('classics').classList.remove("none");
+            document.getElementById('chocolate').classList.add("none");
+            document.getElementById('classics-btn').classList.add("active");
+            document.getElementById('all-btn').classList.remove("active");
+          } else if (label == 'all') {
+            document.getElementById('filter-container').classList.remove("none");
+          } 
+
+         }
+
+
+
         </script>
 
 

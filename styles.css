@@ -434,7 +434,10 @@ figcaption {
     color: white;
   }
 
-  
+  /* Hide selected items */
+  .none {
+    display: none;
+  }
 
   
 
