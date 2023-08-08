@@ -421,7 +421,9 @@ figcaption {
     padding: 12px 16px;
     background-color: #CDFCFE;
     cursor: pointer;
-    display: inline-block;
+    text-align: center;
+    margin-left: 47%;
+    margin-right: 47%;
   }
   
   /* Add a light grey background on mouse-over */
@@ -445,16 +447,25 @@ figcaption {
 .recipe-form-block {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 #recipe-outcome-block {
-    padding-left: 2em;
-    padding-right: 5em;
+    padding-right: 2em;
 }
 
-.none {
-    display: none;
+
+
+.form-group {
+    text-align: center;
+    padding: 1em;
 }
+
+
+
+
+
+
 
  
 
