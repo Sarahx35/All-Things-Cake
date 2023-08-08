@@ -461,6 +461,13 @@ figcaption {
     padding: 1em;
 }
 
+select {
+    background-color: #CDFCFE;
+    padding: 0.5em;
+    border-color: #CDFCFE;
+}
+
+
 
 
 
