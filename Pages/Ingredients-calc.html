@@ -196,6 +196,9 @@
             while (j < index.length) {
               let number = index[j];
               number = Math.round((number / 12) * numValue);
+              if (number == 0) {
+                number = 1;
+              }
               let ingredient = keys[i];
             ingredientList += "<li>" + number + ingredient + "</li>"; 
             i++;
@@ -213,6 +216,9 @@
             while (j < index.length) {
               let number = index[j];
               number = Math.round((number / 12) * numValue);
+              if (number == 0) {
+                number = 1;
+              }
               let ingredient = keys[i];
             ingredientList += "<li>" + number + ingredient + "</li>"; 
             i++;
@@ -230,6 +236,9 @@
             while (j < index.length) {
               let number = index[j];
               number = Math.round((number / 12) * numValue);
+              if (number == 0) {
+                number = 1;
+              }
               let ingredient = keys[i];
             ingredientList += "<li>" + number + ingredient + "</li>"; 
             i++;
