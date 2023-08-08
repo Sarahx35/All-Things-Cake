@@ -73,7 +73,7 @@
   
       <div id="new-recipe-outcome">
         <p id="new-recipe-outcome-2"></p>
-        <p id="new-recipe-outcome-3"></p>
+        <p id="new-recipe-outcome-3"><ul id = "new-recipe-list"></ul></p>
       </div>
     </div>
 
@@ -88,7 +88,6 @@
           <li>225g butter</li>
         </ul>`;
       const chocolateCake = `Original Recipe (Serves 12):
-        <p>For the cake:</p>
         <ul>
           <li>225g plain flour</li>
           <li>350g caster sugar</li>
@@ -100,15 +99,10 @@
           <li>125ml vegetable oil</li>
           <li>2 tsp vanilla extract</li>
           <li>250ml boiling water</li>
-        </ul>
-        <p>For the chocolat ganache:</p>
+        </ul>`;
+      const lemonDrizzle = `Original Recipe (Serves 12)
         <ul>
-          <li>200g plain chocolate</li>
-          <li>200ml double cream</li>
-          </ul>`;
-      const lemonDrizzle = `Original Recipe (Serves 8)
-        <ul>
-          <li>225 g unsalted butter, room temperature, plus more for tin</li>
+          <li>225 g unsalted butter</li>
           <li>300 g caster sugar</li>
           <li>225 g self-raising flour</li>
           <li>4 large eggs</li>
@@ -142,33 +136,110 @@
       const submitClick = submit.addEventListener('click', clickOutcome);
 
       function clickOutcome() {
-        let value = document.getElementById("number-people").value;
-        document.getElementById('new-recipe-outcome-2').innerHTML = "Recipe for " + value + ":";
-        
-        
-        //This potentially inside if statement as it's depending on recipe
-        //For loop needed to go through and add every ingredient and number. 
-        document.getElementById('new-recipe-outcome-3').innerHTML = 
-        "<ul>"
-        + "<li>" + "1" 
-        + "</li>" 
-        + "</ul>";
+        let numValue = document.getElementById("number-people").value;
+        if (numValue == 'Select a number') {
+          let element = document.getElementById("new-recipe-outcome")
+          element.classList.remove("none");    
+          element.classList.add("none");        
+        } else {
+          document.getElementById('new-recipe-outcome-2').innerHTML = "Recipe for " + numValue + ":";
+        }
 
+
+
+        const updatedVictoriaSponge = {
+          " eggs": 4,
+          "g caster sugar": 225,
+          "g self-raising flour": 225,
+          " tsp baking powder": 2,
+          "g butter": 225
+        };
+
+        const updatedChocolateCake = {
+          "g plain flour": 225,
+          "g caster sugar": 350,
+          "g cocoa powder": 85,
+          " tsp baking powder": 1.5,
+          " tsp bicarbonate of soda": 1.5,
+          " eggs": 2,
+          "ml milk": 250,
+          "ml vegetable oil": 125,
+          " tsp vanilla extract": 2,
+          "ml boiling water": 250
+        }
+
+        const updatedLemonDrizzle = {
+          "g unsalted butter": 225,
+          "g caster sugar": 300,
+          "g self-raising flour": 225,
+          " eggs": 4,
+          " tsp lemon zest": 1,
+          " tbsp lemon juice": 1
+        }
+
+        const noRecipe = "No Recipe Chosen";
+
+
+
+        
+
+        let value = document.getElementById("recipes").value;
+        if (value === "Victoria Sponge") {
+          const keys = Object.keys(updatedVictoriaSponge);
+          const index = Object.values(updatedVictoriaSponge);
+          let i = 0;
+          let j = 0;
+          let ingredientList = "";
+          while (i < keys.length) {
+            while (j < index.length) {
+              let number = index[j];
+              number = Math.round((number / 12) * numValue);
+              let ingredient = keys[i];
+            ingredientList += "<li>" + number + ingredient + "</li>"; 
+            i++;
+            j++;
+            }
+          }
+          document.getElementById('new-recipe-list').innerHTML = ingredientList;
+        } else if (value === "Chocolate Cake") {
+          const keys = Object.keys(updatedChocolateCake);
+          const index = Object.values(updatedChocolateCake);
+          let i = 0;
+          let j = 0;
+          let ingredientList = "";
+          while (i < keys.length) {
+            while (j < index.length) {
+              let number = index[j];
+              number = Math.round((number / 12) * numValue);
+              let ingredient = keys[i];
+            ingredientList += "<li>" + number + ingredient + "</li>"; 
+            i++;
+            j++;
+            }
+          }
+          document.getElementById('new-recipe-list').innerHTML = ingredientList;
+        } else if (value === "Lemon Drizzle") {
+          const keys = Object.keys(updatedLemonDrizzle);
+          const index = Object.values(updatedLemonDrizzle);
+          let i = 0;
+          let j = 0;
+          let ingredientList = "";
+          while (i < keys.length) {
+            while (j < index.length) {
+              let number = index[j];
+              number = Math.round((number / 12) * numValue);
+              let ingredient = keys[i];
+            ingredientList += "<li>" + number + ingredient + "</li>"; 
+            i++;
+            j++;
+            }
+          }
+          document.getElementById('new-recipe-list').innerHTML = ingredientList;
+        } else if (value === 'Select recipe') {
+          let element = document.getElementById("new-recipe-outcome")
+          element.classList.add("none");
+        }
       }
-
-
-      //MUCCLE ADVICE = Look at looping over object, but my idea of using loop to print text and deal with numbers seperately seems okay
-
-      const updatedVictoriaSponge = {
-        eggs: 4,
-        casterSugar: 225,
-        selfRaisingFlour: 225,
-        bakingPowder: 2,
-        butter: 225
-      };
-
-      const updatedVictoriaSponge2 = [['eggs', 4], ['casterSugar', 225], ['selfRaisingFlour', 225], ['bakingPowder', 2], ['butter', 225]]
-
     
 
     </script>

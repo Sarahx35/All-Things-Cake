@@ -452,6 +452,10 @@ figcaption {
     padding-right: 5em;
 }
 
+.none {
+    display: none;
+}
+
  
 
 /* END OF ALL RECIPES */
