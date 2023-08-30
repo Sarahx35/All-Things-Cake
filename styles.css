@@ -377,13 +377,13 @@ figcaption {
     margin-right: 30%;
     padding-bottom: 3em;
     padding-top: 1em;
-
 }
 
 .all-recipes-list h2 {
     text-align: center;
     padding-bottom: 1em;
 }
+
 
 .list {
     display: flex;
@@ -419,11 +419,10 @@ figcaption {
     border: none;
     outline: none;
     padding: 0.7em 1em;
+    margin-bottom: 1em;
     background-color: #CDFCFE;
     cursor: pointer;
     text-align: center;
-    margin-left: 47%;
-    margin-right: 47%;
     display: inline-block
   }
   
