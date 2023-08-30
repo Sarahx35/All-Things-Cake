@@ -233,6 +233,10 @@ main {
     padding-right: 5em;
 }
 
+.ingredients li {
+    padding: 0.2em;
+}
+
 
 
 .recipe-cake-img {
